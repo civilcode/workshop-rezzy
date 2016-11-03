@@ -1,6 +1,8 @@
 # Rezzy
 
-**TODO: Add description**
+Demonstrates a simple application with Elixir, including important concepts of the language.
+Check out the `ecto` branch for Ecto integration.
+
 
 ## Installation
 
