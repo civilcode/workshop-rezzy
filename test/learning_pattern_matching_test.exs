@@ -1,10 +1,12 @@
 defmodule LearningPatternMatching do
   use ExUnit.Case
+
   # = a match operator
   # * left-hand-side: "pattern"
   # * right-hand-side: "term"
   # * left-hand-side "pattern" is asserting a match on the right-hand-side "term"
   # x = a + 1 assertion and not an assignment
+
   test "basics" do
     assert a = 1
     assert 1 = a

@@ -1,7 +1,7 @@
 defmodule LearningDateTimeTest do
   use ExUnit.Case
 
-  # Timex https://github.com/bitwalker/timex
+  # For additional Calendar functions see Timex https://github.com/bitwalker/timex
 
   test "new dates" do
     {:ok, new_date} = Date.new(2016, 11, 02)

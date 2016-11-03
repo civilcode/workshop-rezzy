@@ -5,6 +5,7 @@ defmodule Rezzy do
 
   # Move separate file
   # Demonstrate alias
+
   defmodule Reservation do
     defstruct reserved_for: nil, name: nil, email: nil, quantity: 4, id: nil
   end
@@ -29,8 +30,7 @@ defmodule Rezzy do
       email: email,
       quantity: String.to_integer(quantity)
     }
-    # rewrite with the pipe operator
+
     Rezzy.InMemoryRepo.insert(new_reservation)
-    # {:ok, [new_reservation | repository] }
   end
 end
