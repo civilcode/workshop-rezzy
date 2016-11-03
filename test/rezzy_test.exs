@@ -4,6 +4,8 @@ defmodule RezzyTest do
 
   doctest Rezzy
 
+  # What we will learn
+
   # 1. Pattern Matching
 
   # 2. Non-scalar Data Types/Collections
@@ -28,15 +30,9 @@ defmodule RezzyTest do
   end
 
   test "adding reservations" do
-    repository = []
     params = %{"reserved_for" => "2016-11-11", "name" => "Nicholas", "email" => "nicholas@civilcode.io", "quantity" => "4"}
-    # destructuring / pattern matching
-    # tagged tuples
-    {:ok, reservation} = Rezzy.add_reservation(repository, params)
-    # IEx.pry
-    # :debugger.start()
+    {:ok, reservation} = Rezzy.add_reservation(params)
 
-    # sigils, Date/DateTime
     assert reservation.id
     assert %{name: "Nicholas", reserved_for: ~D[2016-11-11], email: "nicholas@civilcode.io", quantity: 4} = reservation
 

@@ -15,15 +15,15 @@ defmodule Rezzy do
   # - pattern matching
   # - guard clause
 
-  def add_reservation(_repository) do
+  def add_reservation do
     {:error, :missing_params}
   end
 
-  def add_reservation(_repository, params) when is_nil(params) do
+  def add_reservation(params) when is_nil(params) do
     {:error, :missing_params}
   end
 
-  def add_reservation(repository, %{"reserved_for" => date, "name" => name, "email" => email, "quantity" => quantity}) do
+  def add_reservation(%{"reserved_for" => date, "name" => name, "email" => email, "quantity" => quantity}) do
     new_reservation = %Reservation{
       reserved_for: Date.from_iso8601!(date),
       name: name,
